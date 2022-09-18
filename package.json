@@ -20,6 +20,7 @@
     "clean": "npm-run-all -p clean:*",
     "clean:local": "rimraf test-project",
     "clean:dist": "rimraf dist",
+    "clean:compress": "rimraf create-pure-liquid-*",
     "postInstall": "typesync",
     "push": "yarn publish --access public",
     "compress": "yarn pack --dry-run"

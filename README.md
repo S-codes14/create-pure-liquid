@@ -1,7 +1,8 @@
-# Pure Liquid
+# Create Pure Liquid
 
-Pure Liquid is a starter kit with Liquid for front-end projects.
-This starter kit focuses on building a static website and suits small to medium projects like a landing page and a corporate website.
+Create a Pure Liquid project in seconds. Pure Liquid is a starter kit with Liquid for static websites.
+
+[💧Pure Liquid](https://github.com/Kazuki-tam/pure-liquid#readme)
 
 ## Quick Overview
 
