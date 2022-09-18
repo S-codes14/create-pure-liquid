@@ -4,9 +4,14 @@ Create a Pure Liquid project in seconds. Pure Liquid is a starter kit with Liqui
 
 [💧Pure Liquid](https://github.com/Kazuki-tam/pure-liquid#readme)
 
+## Requirements
+
+- [Node v16+](https://nodejs.org/en/)
+- [Yarn v2+](https://yarnpkg.com/)
+
 ## Quick Overview
 
-A new `Pure Liquid` project can be bootstrapped using this repository as a template using the following command:
+Set up a static website by running one command.
 
 ```bash
 yarn create pure-liquid <YOUR-PROJECT-NAME>
