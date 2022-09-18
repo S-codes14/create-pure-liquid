@@ -1,38 +1,6 @@
 #!/usr/bin/env node
-import figlet from 'figlet';
-import emojiRegex from 'emoji-regex';
-import chalk from 'chalk';
 import { execSync } from 'child_process';
-
-const myOriginalLibrary = (emoji: string) => {
-  const message = 'Pure Liquid';
-  const isEmoji = emojiRegex().exec(emoji);
-
-  if (isEmoji) {
-    const decoration = emoji.repeat(30);
-
-    figlet(message, (_, result) => {
-      console.log(decoration);
-      console.log(result);
-      console.log(decoration);
-      console.log(
-        chalk.blue(
-          '\nYou are ready to develop! Follow the following commands to start.\n'
-        )
-      );
-      console.log(
-        chalk.green(`cd ${projectName} && yarn build && yarn start\n`)
-      );
-    });
-
-    return 'OK';
-  }
-
-  throw new Error(`
-    ❌ Please pass emoji as argument
-    👉 ex) myOriginalLibrary('💧');
-  `);
-};
+import { showSuccessMessage } from './helper/showSuccessMessage';
 
 const runCommand = (command: string) => {
   try {
@@ -57,4 +25,4 @@ console.log(`Installing dependencies for ${projectName}`);
 const installedDeps = runCommand(installCommand);
 if (!installedDeps) process.exit();
 
-myOriginalLibrary('💧');
+showSuccessMessage('💧', projectName);
