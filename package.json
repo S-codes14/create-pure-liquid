@@ -1,23 +1,22 @@
 {
   "name": "create-pure-liquid",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Create a Pure Liquid project in seconds.",
-  "bin": "dist/bin/cli.js",
-  "main": "dist/index.js",
+  "bin": "dist/cli.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "prd": "npm-run-all build lint push",
+    "prd": "npm-run-all build lint compress push",
     "build": "npm-run-all clean -p build:*",
     "build:common": "tsc",
     "build:esm": "tsc -p tsconfig.esm.json",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint . --ext .ts,.tsx --fix",
     "lint:prettier": "prettier --write .",
-    "local": "node dist/bin/cli.js test-project",
+    "local": "node dist/cli.js test-project",
     "clean": "npm-run-all -p clean:*",
     "clean:local": "rimraf test-project",
     "clean:dist": "rimraf dist",
