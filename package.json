@@ -1,10 +1,8 @@
 {
   "name": "create-pure-liquid",
-  "version": "1.0.3",
-  "description": "Pure Liquid CLI",
-  "bin": {
-    "create-pure-liquid": "dist/bin/cli.js"
-  },
+  "version": "1.0.4",
+  "description": "Create a Pure Liquid project in seconds.",
+  "bin": "dist/bin/cli.js",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
