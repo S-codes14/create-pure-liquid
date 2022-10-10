@@ -2,7 +2,11 @@ import figlet from 'figlet';
 import emojiRegex from 'emoji-regex';
 import chalk from 'chalk';
 
-export const showSuccessMessage = (emoji: string, projectName: string) => {
+export const showSuccessMessage = (
+  emoji: string,
+  projectName: string,
+  packageManager: string
+) => {
   const message = 'Pure Liquid';
   const isEmoji = emojiRegex().exec(emoji);
 
@@ -19,7 +23,11 @@ export const showSuccessMessage = (emoji: string, projectName: string) => {
         '\nYou are ready to develop! Follow the following commands to start.\n'
       )
     );
-    console.log(chalk.green(`cd ${projectName} && yarn build && yarn start\n`));
+    console.log(
+      chalk.green(
+        `cd ${projectName} && ${packageManager} run build && ${packageManager} run start\n`
+      )
+    );
   });
   return true;
 };
